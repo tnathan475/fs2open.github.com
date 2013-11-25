@@ -32,6 +32,7 @@
 #include "cmdline/cmdline.h"
 #include "cfile/cfilesystem.h"
 #include "network/multimsgs.h"
+#include "mission/missionparse.h"
 #include "mod_table/mod_table.h"
 
 #ifndef WIN32
