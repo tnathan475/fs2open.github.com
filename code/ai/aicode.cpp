@@ -8762,19 +8762,6 @@ void ai_chase()
 					Assert(tswp->current_primary_bank < tswp->num_primary_banks);
 					weapon_info	*pwip = &Weapon_info[tswp->primary_bank_weapons[tswp->current_primary_bank]];
 
-					//	Less likely to fire if far away and moving.
-					scale = pwip->max_speed/(En_objp->phys_info.speed + pwip->max_speed);
-					if (scale > 0.6f)
-						scale = (scale - 0.6f) * 1.5f;
-					else
-						scale = 0.0f;
-					if (dist_to_enemy < pwip->max_speed * (1.0f + scale)) {
-						if(ai_fire_primary_weapon(Pl_objp) == 1){
-							has_fired = 1;
-						}else{
-							has_fired = -1;
-						}
-					}
 				}
 
 				if ( tswp->num_secondary_banks > 0) {
